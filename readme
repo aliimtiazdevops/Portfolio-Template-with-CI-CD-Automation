@@ -1,0 +1,125 @@
+# Developer Portfolio Template
+
+This **Developer Portfolio Template** is a responsive website for showcasing developer skills and projects, deployed automatically using a Jenkins CI/CD pipeline with GitHub webhooks. As a DevOps engineer, I built this to demonstrate automated deployment workflows, ensuring instant updates to GitHub Pages on every code push.
+
+## Features
+- Automated deployment to GitHub Pages via Jenkins CI/CD pipeline with GitHub webhook triggers.
+- Responsive portfolio template for showcasing developer skills and projects.
+- Fixed header with hamburger menu for mobile-friendly navigation.
+- Project case studies for e-commerce, task management, and portfolio sites.
+- Contact form for inquiries (requires backend integration).
+- Social media integration with links to LinkedIn, GitHub, Twitter, YouTube, and Instagram.
+
+## Technologies Used
+- Jenkins: Automates CI/CD pipeline for seamless deployment.
+- GitHub Webhooks: Triggers pipeline on code pushes to the `main` branch.
+- GitHub Pages: Hosts the static portfolio site.
+- Git: Manages version control for the repository.
+- HTML5, CSS3 (SASS), JavaScript, React, TypeScript, Tailwind CSS: Core technologies for the portfolio template.
+
+## Project Structure
+```
+├── assets
+│   ├── jpeg/project-mockup-example.jpeg
+│   ├── png/linkedin-ico.png, github-ico.png, twitter-ico.png, yt-ico.png, insta-ico.png
+│   └── svg/common-bg.svg, ham-menu.svg, ham-menu-close.svg
+├── css/style.css
+├── index.html
+├── index.js
+├── project-1.html
+├── project-2.html
+├── project-3.html
+├── Jenkinsfile
+└── README.md
+```
+
+**Jenkinsfile** (CI/CD Pipeline):
+pipeline {
+    agent any
+
+    environment {
+        GIT_CREDENTIALS_ID = 'your-github-credentials-id'
+        REPO_URL = 'https://github.com/aliimtiazdevops/Portfolio-Template-with-CI-CD-Automation'
+        BRANCH = 'main'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM',
+                    branches: [[name: "*/${BRANCH}"]],
+                    userRemoteConfigs: [[url: "${REPO_URL}", credentialsId: "${GIT_CREDENTIALS_ID}"]]
+                ])
+            }
+        }
+
+        stage('Validate') {
+            steps {
+                echo 'Validating HTML, CSS, and JS...'
+                // Optional: add linters if you want
+                // bat 'htmlhint index.html'
+                // bat 'stylelint style.css'
+                // bat 'eslint script.js'
+            }
+        }
+
+        stage('Deploy to GitHub Pages') {
+            steps {
+                echo 'Deploying site...'
+                // Install gh-pages if needed
+                bat 'npm install -g gh-pages'
+                // Deploy the site
+                bat 'gh-pages -d .'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Site deployed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
+
+```
+
+- `index.html`: Main portfolio page (Home, About, Projects, Contact).
+- `project-*.html`: Project case study pages.
+- `css/style.css`: Responsive styles.
+- `index.js`: Hamburger menu functionality.
+- `Jenkinsfile`: Automates deployment.
+- `assets/`: Images, icons, SVGs.
+
+## Setup
+1. **Clone**:
+   ```bash
+   git clone https://github.com/aliimtiazdevops/Portfolio-Template-with-CI-CD-Automation.git
+   cd Portfolio-Template-with-CI-CD-Automation
+   ```
+2. **Run Locally**:
+   ```bash
+   npm install -g live-server
+   live-server .
+   ```
+3. **CI/CD Setup**:
+   - Install Jenkins, add GitHub plugin Bronze plugin.
+   - Set GitHub webhook (`http://<jenkins-url>/github-webhook/`) for `main` branch pushes.
+   - Update `Jenkinsfile` with your credentials and URLs.
+   - Push to `main` to deploy.
+
+## Usage
+- Edit `index.html`, `project-*.html`, `style.css` for customization.
+- Update social media links.
+- Push to `main` for automatic deployment.
+
+## Contact
+- **Email**: ali.imtiaz@example.com
+- **GitHub**: [https://github.com/aliimtiazdevops](https://github.com/aliimtiazdevops)
+
+
+---
+
+🚀 Deployed by Ali Imtiaz, DevOps Engineer.
