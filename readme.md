@@ -132,9 +132,10 @@ live-server .
 
 ## 📬 Contact
 - **Email:** aliimtiaz.dev@gmail.com  
-- **GitHub:** (https://www.linkedin.com/in/ali-imtiaz1/)
+- **GitHub:** https://www.linkedin.com/in/ali-imtiaz1/
 
 ---
 
 
 🧑‍💻 *Deployed by Ali Imtiaz, DevOps Engineer*
+
