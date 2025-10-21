@@ -1,30 +1,40 @@
-# Developer Portfolio Template
+<h1 align="center">**Developer Portfolio Template**</h1>
 
-This **Developer Portfolio Template** is a responsive website designed for developers to showcase their skills and projects, deployed seamlessly using a Jenkins CI/CD pipeline with GitHub webhooks. As a DevOps engineer, I crafted this to highlight automated deployment workflows, ensuring instant updates to GitHub Pages on every code push.
+<div align="center">
+This Developer Portfolio Template is a responsive website for showcasing developer skills and projects, deployed automatically using a Jenkins CI/CD pipeline with GitHub webhooks. As a DevOps engineer, I built this to demonstrate automated deployment workflows, ensuring instant updates to GitHub Pages on every code push.
+</div>
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/aliimtiazdevops/Portfolio-Template-with-CI-CD-Automation)
-[![Jenkins](https://img.shields.io/badge/Jenkins-CI/CD-orange)](https://www.jenkins.io/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-green)](https://aliimtiazdevops.github.io/Portfolio-Template-with-CI-CD-Automation)
+<br>
 
-**Demo**: [View Live Site](https://aliimtiazdevops.github.io/Portfolio-Template-with-CI-CD-Automation)
+<h2 align="center">**Features**</h2>
 
-![Portfolio Screenshot](assets/jpeg/portfolio-screenshot.jpeg)
+<h2 align="center">**Features**</h2>
 
-## Features
-- **Automated Deployment**: Jenkins CI/CD pipeline with GitHub webhooks for instant GitHub Pages updates.
-- **Responsive Design**: Adapts to desktops, tablets, and mobiles.
-- **Interactive Navigation**: Fixed header with hamburger menu for mobile users.
-- **Project Case Studies**: Showcases for e-commerce, task management, and portfolio sites.
-- **Contact Form**: Ready for backend integration to handle inquiries.
-- **Social Media Integration**: Links to LinkedIn, GitHub, Twitter, YouTube, and Instagram.
+<div align="center">
+- **Automated deployment** to GitHub Pages via Jenkins CI/CD pipeline with GitHub webhook triggers.<br>
+- **Responsive portfolio template** for showcasing developer skills and projects.<br>
+- **Fixed header** with hamburger menu for mobile-friendly navigation.<br>
+- **Project case studies** for e-commerce, task management, and portfolio sites.<br>
+- **Contact form** for inquiries (requires backend integration).<br>
+- **Social media integration** with links to LinkedIn, GitHub, Twitter, YouTube, and Instagram.
+</div>
 
-## Technologies Used
-- **Jenkins**: Automates CI/CD pipeline for deployment.
-- **GitHub Webhooks**: Triggers pipeline on `main` branch pushes.
-- **GitHub Pages**: Hosts the static site.
-- **Git**: Manages version control.
-- **HTML5, CSS3 (SASS), JavaScript, React, TypeScript, Tailwind CSS**: Core template technologies.
-- **Google Fonts (Source Sans Pro)**: Clean typography.
-- **Shopify, WordPress, Google Ads, Facebook Ads**: Past project experience.
+<br>
 
-## Project Structure
+<h2 align="center">**Technologies Used**</h2>
+
+<div align="center">
+- **Jenkins**: Automates CI/CD pipeline for seamless deployment.<br>
+- **GitHub Webhooks**: Triggers pipeline on code pushes to the main branch.<br>
+- **GitHub Pages**: Hosts the static portfolio site.<br>
+- **Git**: Manages version control for the repository.<br>
+- **HTML5, CSS3 (SASS), JavaScript, React, TypeScript, Tailwind CSS**: Core technologies for the portfolio template.<br>
+- **Google Fonts (Source Sans Pro)**: Provides clean typography.<br>
+- **Shopify, WordPress, Google Ads, Facebook Ads**: Leveraged in past projects.
+</div>
+
+<br>
+
+<h2 align="center">**Project Structure**</h2>
+
+<div align="center">
